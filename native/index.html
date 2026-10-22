@@ -2,6 +2,7 @@
     <head>
         <title>Форма авторизации</title>
         <link rel="stylesheet" href="./styles.css" />
+        <script src="./index.js"></script>
     </head>
     <body>
         <header>Авторизация</header>
@@ -15,11 +16,11 @@
                     <input type="checkbox" />
                     <label>Запомнить меня</label>
                 </div>
-                <button>Вход</button>
+                <button onclick="GetRandColor(event)" id="Main">Вход</button>
                 <br/>
                 <div>
-                    <button>Войти через MAX</button>
-                    <button>Войти через VK</button>
+                    <button onclick="GetRandColor(event)" id="Max" >Войти через MAX</button>
+                    <button onclick="GetRandColor(event)" id="VK">Войти через VK</button>
                 </div>
             </div>
         </main>

@@ -1,0 +1,29 @@
+body{
+    background-color: #f99191;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: fit-content;
+    padding: 24px;
+    gap: 8px;
+}
+
+.outline{
+    border: solid 5px #b80000;
+    border-radius: 8px;
+}
+
+.card-header{
+    padding: 0px;
+    margin: 0px;
+}
