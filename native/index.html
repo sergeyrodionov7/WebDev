@@ -1,29 +1,62 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
     <head>
-        <title>Форма авторизации</title>
-        <link rel="stylesheet" href="./styles.css" />
-        <script src="./index.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dodo Pizza вЂ” РІС…РѕРґ</title>
+        <link rel="stylesheet" href="./styles.css">
+        <script src="./index.js" defer></script>
     </head>
     <body>
-        <header>Авторизация</header>
-        <main class="main">
-            <div class="card outline">
-                <h4 class="card-header">Вход в систему</h4>
-                <h4 class="card-header">Использовать логин и пароль</h4 >
-                <input type="email" />
-                <input type="password" />
-                <div>
-                    <input type="checkbox" />
-                    <label>Запомнить меня</label>
+        <header class="site-header">
+            <p class="head">Dodo Pizza рџЌ• РІС…РѕРґ</p>
+        </header>
+        <main class="hero">
+            <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+                <source src="media/fon.mp4" type="video/mp4">
+            </video>
+            <section class="main" aria-labelledby="login-title">
+                <div class="card">
+                    <div class="row">
+                        <img src="media/dodo.png" alt="Р”РѕРґРѕ РџРёС†С†Р°" class="logo">
+                        <img src="media/out.png" alt="" class="close-icon" aria-hidden="true">
+                    </div>
+
+                    <h1 class="card-title" id="login-title">РЈРєР°Р¶РёС‚Рµ С‚РµР»РµС„РѕРЅ Рё РїР°СЂРѕР»СЊ</h1>
+                    <p class="card-subtitle">Р§С‚РѕР±С‹ РІРѕР№С‚Рё РІ РїСЂРѕС„РёР»СЊ</p>
+
+                    <form class="login-form" id="loginForm" novalidate>
+                        <div class="field">
+                            <label for="phone">РўРµР»РµС„РѕРЅ</label>
+                            <input class="form" type="tel" placeholder="+7 (___) ___-__-__" id="phone" autocomplete="tel" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="password">РџР°СЂРѕР»СЊ</label>
+                            <input class="form" type="password" placeholder="РџР°СЂРѕР»СЊ" id="password" autocomplete="current-password" required>
+                        </div>
+
+                        <label class="remember">
+                            <input type="checkbox" id="remember">
+                            <span>Р—Р°РїРѕРјРЅРёС‚СЊ РјРµРЅСЏ</span>
+                        </label>
+
+                        <p class="message" id="message" aria-live="polite"></p>
+
+                        <p class="legal">
+                            РџСЂРѕРґРѕР»Р¶Р°СЏ, РІС‹ СЃРѕРіР»Р°С€Р°РµС‚РµСЃСЊ СЃ СѓСЃР»РѕРІРёСЏРјРё РЅР°С€РёС… СЋСЂРёРґРёС‡РµСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ.
+                        </p>
+
+                        <button class="btn" id="Main" type="submit">Р’РѕР№С‚Рё</button>
+                    </form>
+
+                    <div class="social-actions">
+                        <button class="btn btn-secondary" id="Max" type="button">Р’РѕР№С‚Рё С‡РµСЂРµР· MAX</button>
+                        <button class="btn btn-secondary" id="VK" type="button">Р’РѕР№С‚Рё С‡РµСЂРµР· VK</button>
+                    </div>
                 </div>
-                <button onclick="GetRandColor(event)" id="Main">Вход</button>
-                <br/>
-                <div>
-                    <button onclick="GetRandColor(event)" id="Max" >Войти через MAX</button>
-                    <button onclick="GetRandColor(event)" id="VK">Войти через VK</button>
-                </div>
-            </div>
+            </section>
         </main>
-        <footer>Подвал</footer>
+        <footer class="site-footer">В© 2023 Dodo Pizza. Р’СЃРµ РїСЂР°РІР° РЅРµ Р·Р°С‰РёС‰РµРЅС‹.</footer>
     </body>
 </html>
