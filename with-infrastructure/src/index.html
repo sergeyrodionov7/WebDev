@@ -1,31 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <title>Форма авторизации</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dodo Pizza — вход</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./index.js" defer></script>
+    <script type="module" src="./index.ts"></script>
   </head>
   <body>
-    <header>Авторизация</header>
-    <main class="main">
-      <div class="card outline">
-        <h4 class="card-header">Вход в систему</h4>
-        <h4 class="card-header">Использовать логин и пароль</h4>
-        <input type="email" />
-        <input type="password" />
-        <div>
-          <input type="checkbox" />
-          <label>Запомнить меня</label>
+    <header class="site-header">
+      <p class="head">Dodo Pizza 🍕 вход</p>
+    </header>
+    <main class="hero">
+      <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="media/fon.mp4" type="video/mp4" />
+      </video>
+      <section class="main" aria-labelledby="login-title">
+        <div class="card">
+          <div class="row">
+            <img src="media/dodo.png" alt="Додо Пицца" class="logo" />
+            <img src="media/out.png" alt="" class="close-icon" aria-hidden="true" />
+          </div>
+
+          <h1 class="card-title" id="login-title">Укажите телефон и пароль</h1>
+          <p class="card-subtitle">Чтобы войти в профиль</p>
+
+          <form class="login-form" id="loginForm" novalidate>
+            <div class="field">
+              <label for="phone">Телефон</label>
+              <input
+                class="form"
+                type="tel"
+                placeholder="+7 (___) ___-__-__"
+                id="phone"
+                autocomplete="tel"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="password">Пароль</label>
+              <input
+                class="form"
+                type="password"
+                placeholder="Пароль"
+                id="password"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+
+            <label class="remember">
+              <input type="checkbox" id="remember" />
+              <span>Запомнить меня</span>
+            </label>
+
+            <p class="message" id="message" aria-live="polite"></p>
+
+            <p class="legal">
+              Продолжая, вы соглашаетесь с условиями наших юридических документов.
+            </p>
+
+            <button class="btn" id="Main" type="submit">Войти</button>
+          </form>
+
+          <div class="social-actions">
+            <button class="btn btn-secondary" id="Max" type="button">Войти через MAX</button>
+            <button class="btn btn-secondary" id="VK" type="button">Войти через VK</button>
+          </div>
         </div>
-        <button id="Main">Вход</button>
-        <br />
-        <div>
-          <button id="Max">Войти через MAX</button>
-          <button id="VK">Войти через VK</button>
-        </div>
-      </div>
+      </section>
     </main>
-    <footer>Подвал</footer>
+    <footer class="site-footer">© 2023 Dodo Pizza. Все права не защищены.</footer>
   </body>
 </html>
